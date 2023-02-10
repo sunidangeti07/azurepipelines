@@ -3,5 +3,5 @@ pool:
   name: "Azure Pipelines"
 
 steps:
-  script: echo orey raj
+  - bash: echo orey raj
             
