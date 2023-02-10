@@ -1,0 +1,13 @@
+---
+pool:
+  - vmimage: "ubuntu latest"
+    name: "azirepipelines"
+
+triggers:
+  - master
+
+steps:
+  tasks:
+    - displayName: run one script
+      script: echo orey raj
+            
