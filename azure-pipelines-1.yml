@@ -3,7 +3,5 @@ pool:
   name: "Azure Pipelines"
 
 steps:
-  tasks:
-    - displayName: run one script
-      script: echo orey raj
+  script: echo orey raj
             
