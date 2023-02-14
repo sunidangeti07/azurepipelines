@@ -1,10 +1,6 @@
 ---
 pool:
-  - vmimage: "ubuntu latest"
-    name: "azirepipelines"
-
-triggers:
-  - master
+  name: "Azure Pipelines"
 
 steps:
   tasks:

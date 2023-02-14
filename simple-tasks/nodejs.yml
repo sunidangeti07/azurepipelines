@@ -1,0 +1,26 @@
+---
+pool:
+  name: "azure pipelines"
+  vmImage: "ubuntu-latest"
+
+triggers:
+  - main
+
+steps:
+  - tasks: NodeTool@0
+    displayName: first task
+    inputs:
+      versionSpec: 12.22.9
+
+  - tasks: Npm@1
+    displayName: intalling npm
+    inputs:
+      command: sudo apt install npm -y
+
+  - tasks: Npm@1
+    displayName: intalling build
+    inputs:
+      command: npm run build
+        
+
+          
