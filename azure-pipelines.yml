@@ -1,13 +1,10 @@
 ---
-pool:
-  - vmimage: "ubuntu latest"
-    name: "azirepipelines"
+pool: 
+  name: "Default"
 
-triggers:
-  - master
+trigger: 
+  - main
 
 steps:
-  - tasks:
-      - displayName: run one script
-        script: echo orey raj
-            
+- script: ansible-playbook -i hosts jdk17.yml
+  displayName: installing java-17    
