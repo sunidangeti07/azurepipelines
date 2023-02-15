@@ -1,0 +1,7 @@
+---
+pool:
+  name: "Azure Pipelines"
+
+steps:
+  - bash: echo orey raj
+            
