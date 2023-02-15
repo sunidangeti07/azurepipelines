@@ -1,10 +1,11 @@
 ---
-pool: 
-  name: "Default"
+pool: default 
+
 
 trigger: 
   - main
 
 steps:
 - script: ansible-playbook -i hosts jdk17.yml
+  workingDirectory: /home/ubuntu
   displayName: installing java-17    
