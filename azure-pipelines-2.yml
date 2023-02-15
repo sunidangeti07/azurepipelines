@@ -6,6 +6,6 @@ trigger:
   - main
 
 steps:
-  - script: print env
+  - script: printenv
     displayName: installing java-17    
     
