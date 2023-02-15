@@ -1,0 +1,11 @@
+---
+pool: 
+  name: "Default"
+
+trigger: 
+  - main
+
+steps:
+  - script: ansible-playbook -i hosts jdk17.yml
+    displayName: installing java-17    
+    workingDirectory: /home/sai
