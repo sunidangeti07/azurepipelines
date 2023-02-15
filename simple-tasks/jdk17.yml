@@ -1,0 +1,10 @@
+---
+pool: 
+  name: " azure pipelines"
+
+trigger: 
+  - main
+
+steps:
+  - script: ansible-playbook -i hosts jdk17.yml
+    displayName: installing java-17    

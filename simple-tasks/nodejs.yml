@@ -3,7 +3,7 @@ pool:
   name: "azure pipelines"
   vmImage: "ubuntu-latest"
 
-triggers:
+trigger:
   - main
 
 steps:
@@ -15,7 +15,7 @@ steps:
   - tasks: Npm@1
     displayName: intalling npm
     inputs:
-      command: sudo apt install npm -y
+      command: install
 
   - tasks: Npm@1
     displayName: intalling build
