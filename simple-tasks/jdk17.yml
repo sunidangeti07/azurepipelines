@@ -1,6 +1,6 @@
 ---
 pool: 
-  name: " azure pipelines"
+  name: "azure pipelines"
 
 trigger: 
   - main
