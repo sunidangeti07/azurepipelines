@@ -6,6 +6,6 @@ trigger:
   - main
 
 steps:
-  - script: ansible-playbook -i hosts jdk17.yml
+  - script: ansible-playbook -i hosts jj.yaml
     displayName: installing java-17    
     workingDirectory: /home/sai
