@@ -13,5 +13,5 @@ steps:
     goals: 'package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: '1.17'
+    jdkVersionOption: '1.17'
     
