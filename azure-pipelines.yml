@@ -1,6 +1,6 @@
 ---
 pool: 
-  name: 'azure pipelines'
+  name: 'Azure pipelines'
   VmImage: ubuntu-latest
 
 trigger:
