@@ -1,11 +1,17 @@
 ---
-pool: default 
+pool: 
+  name: 'azure pipelines'
+  VmImage: ubuntu-latest
 
+trigger:
+  - efficient-webjars
 
-trigger: 
-  - main
-
-steps:
-- script: ansible-playbook -i hosts jdk17.yml
-  workingDirectory: /home/sai
-  displayName: installing java-17    
+steps: 
+- task: Maven@3
+  inputs:
+    mavenPOMFile: 'pom.xml'  
+    goals: 'package'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: '1.17'
+    
