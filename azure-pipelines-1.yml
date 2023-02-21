@@ -1,7 +1,15 @@
 ---
-pool:
-  name: "Azure Pipelines"
+pool: 'azure pipelines'
 
-steps:
-  - bash: echo orey raj
-            
+trigger:
+  - efficient-webjars
+
+steps: 
+- task: Maven@3
+  inputs:
+    mavenPOMFile: 'pom.xml'  
+    goals: 'package'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: '1.7'
+    
